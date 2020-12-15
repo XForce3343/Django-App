@@ -1,0 +1,20 @@
+{% extends 'htm/welcome.html' %}
+{% load static %}
+
+<!-- CUSTOM CSS -->
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+{% block content %}
+<div class="card">
+
+	<form method="POST">
+  	<h2>Bienvenido</h2>
+		<form>
+			{% csrf_token %}
+			{{ form.as_p }}
+
+			<button type="submit">Login</button>
+		</form>
+	</div>
+
+{% endblock content %}

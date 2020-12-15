@@ -1,0 +1,14 @@
+{% extends 'htm/welcome.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Iniciar sesion</h2>
+
+<form method="POST">
+	{{ form.as_p }}
+	{% csrf_token %}
+	<button type="submit">Login</button>
+</form>
+
+<a href="register/">Registrar usuario</a>
+{% endblock content %}
